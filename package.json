@@ -1,0 +1,33 @@
+{
+  "name": "trackingmore-sdk-nodejs",
+  "version": "1.0.2",
+  "description": "node.js SDK for TrackingMore API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "trackingmore"
+  ],
+  "author": {
+    "name": "TrackingMore",
+    "email": "manage@trackingmore.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TrackingMores/trackingmore-sdk-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TrackingMores/trackingmore-sdk-nodejs/issues"
+  },
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
