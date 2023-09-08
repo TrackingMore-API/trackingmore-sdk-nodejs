@@ -39,7 +39,7 @@ try {
 }
 ```
 
-## Test
+## Testing
 ```
 npm run test or npm test
 ```
