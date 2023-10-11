@@ -20,14 +20,14 @@ describe('Trackings', () => {
         const apiKey = 'your-api-key';
         const trackings = new Trackings(apiKey);
   
-        expect(() => trackings.createTracking({})).toThrow('Tracking number cannot be empty');
+        expect(() => trackings.createTracking({ tracking_number: '', courier_code: 'usps' })).toThrow('Tracking number cannot be empty');
       });
   
       it('should throw an error when courier_code is missing', () => {
         const apiKey = 'your-api-key';
         const trackings = new Trackings(apiKey);
   
-        expect(() => trackings.createTracking({ tracking_number: 'your-tracking-number' })).toThrow('Courier Code cannot be empty');
+        expect(() => trackings.createTracking({ tracking_number: '9400111899562537624646', courier_code: '' })).toThrow('Courier Code cannot be empty');
       });
   
       it('should send a POST request to /trackings/create with params', () => {
@@ -35,7 +35,7 @@ describe('Trackings', () => {
         const trackings = new Trackings(apiKey);
         const sendApiRequestMock = jest.spyOn(Request, 'sendApiRequest').mockReturnValue({});
   
-        const params = { tracking_number: 'your-tracking-number', courier_code: 'your-courier-code' };
+        const params = { tracking_number: '9400111899562537624646', courier_code: 'usps' };
         trackings.createTracking(params);
   
         expect(sendApiRequestMock).toHaveBeenCalledWith('trackings/create', apiKey, 'POST', params);
@@ -48,7 +48,7 @@ describe('Trackings', () => {
         const trackings = new Trackings(apiKey);
         const sendApiRequestMock = jest.spyOn(Request, 'sendApiRequest').mockReturnValue({});
     
-        const params = { tracking_number: 'your-tracking-number' };
+        const params = { tracking_numbers: '9400111899562537624646' };
         const paramsValue = new URLSearchParams(params).toString()
         trackings.getTrackingResults(params);
     
@@ -65,13 +65,29 @@ describe('Trackings', () => {
     
         expect(() => trackings.batchCreateTrackings(params)).toThrow('Max. 40 tracking numbers create in one call');
         });
+
+        it('should throw an error when tracking_number is missing', () => {
+        const apiKey = 'your-api-key';
+        const trackings = new Trackings(apiKey);
+    
+        const params = [{ tracking_number: '', courier_code: 'usps' }];
+        expect(() => trackings.batchCreateTrackings(params)).toThrow('Tracking number cannot be empty');
+        });
+
+        it('should throw an error when courier_code is missing', () => {
+        const apiKey = 'your-api-key';
+        const trackings = new Trackings(apiKey);
+    
+        const params = [{ tracking_number: '9400111899562537624646', courier_code: '' }];
+        expect(() => trackings.batchCreateTrackings(params)).toThrow('Courier Code cannot be empty');
+        });
     
         it('should send a POST request to /trackings/batch with params', () => {
         const apiKey = 'your-api-key';
         const trackings = new Trackings(apiKey);
         const sendApiRequestMock = jest.spyOn(Request, 'sendApiRequest').mockReturnValue({});
     
-        const params = [{ tracking_number: 'your-tracking-number', courier_code: 'your-courier-code' }];
+        const params = [{ tracking_number: '9400111899562537624646', courier_code: 'usps' }];
         trackings.batchCreateTrackings(params);
     
         expect(sendApiRequestMock).toHaveBeenCalledWith('trackings/batch', apiKey, 'POST', params);
