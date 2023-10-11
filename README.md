@@ -112,16 +112,9 @@ const key = 'you api key'
 const trackingmore = new TrackingMore(key)
 
 // Get results (trackings/get)
-// Perform queries based on various conditions
-// const params = {
-//     'tracking_numbers': '9400111899562537624656',
-//     'courier_code': 'usps',
-// }
-// const params = {
-//     'tracking_numbers': '9400111899562539126562,9400111899562537624656',
-//     'courier_code': 'usps',
-// }
 const params = {
+    'tracking_numbers': '9400111899562539126562,9400111899562537624656',
+    'courier_code': 'usps',
     'created_date_min': '2023-08-23T06:00:00+00:00',
     'created_date_max': '2023-09-05T07:20:42+00:00',
 }
