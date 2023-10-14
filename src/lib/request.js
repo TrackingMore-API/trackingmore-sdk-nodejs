@@ -54,6 +54,7 @@ class Request {
               })
         
               res.on('end', () => {
+                responseData = JSON.parse(responseData)
                 resolve(responseData)
               })
             })
