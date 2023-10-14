@@ -30,7 +30,6 @@ const TrackingMore = require('trackingmore-sdk-nodejs')
 const key = 'you api key'
 const trackingmore = new TrackingMore(key)
 try {
-    // Get all couriers (couriers/all)
     trackingmore.couriers.getAllCouriers()
         .then(result => console.log(result))
         .catch(e => console.log(e))
@@ -64,9 +63,6 @@ try {
 ##### Return a list of all supported couriers.
 https://api.trackingmore.com/v4/couriers/all
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
- // Get all couriers (couriers/all)
 trackingmore.couriers.getAllCouriers()
     .then(result => console.log(result))
     .catch(e => console.log(e))
@@ -75,9 +71,6 @@ trackingmore.couriers.getAllCouriers()
 ##### Return a list of matched couriers based on submitted tracking number.
 https://api.trackingmore.com/v4/couriers/detect
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Detect courier (couriers/detect)
 const params = {'tracking_number': '9400111899562537624326'}
 trackingmore.couriers.detect(params)
     .then(result => console.log(result))
@@ -88,9 +81,6 @@ trackingmore.couriers.detect(params)
 ##### Create a tracking.
 https://api.trackingmore.com/v4/trackings/create
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Create a Tracking (trackings/create)
 const params = {
     'tracking_number': '9400111899562537624326',
     'courier_code': 'usps',
@@ -108,10 +98,6 @@ trackingmore.trackings.createTracking(params)
 ##### Get tracking results of multiple trackings.
 https://api.trackingmore.com/v4/trackings/get
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-
-// Get results (trackings/get)
 const params = {
     'tracking_numbers': '9400111899562539126562,9400111899562537624656',
     'courier_code': 'usps',
@@ -126,9 +112,6 @@ trackingmore.trackings.getTrackingResults(params)
 ##### Create multiple trackings (Max. 40 tracking numbers create in one call).
 https://api.trackingmore.com/v4/trackings/batch
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Create trackings (trackings/batch)
 const params = [{
     'tracking_number': '9400111899562537680047',
     'courier_code':'usps'
@@ -144,9 +127,6 @@ trackingmore.trackings.batchCreateTrackings(params)
 ##### Update a tracking by ID.
 https://api.trackingmore.com/v4/trackings/update/{id}
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Update a Tracking by ID (trackings/update)
 const params = {
     'customer_name': 'New name',
     'note':'New test order note'
@@ -160,9 +140,6 @@ trackingmore.trackings.updateTrackingByID(idString, params)
 ##### Delete a tracking by ID.
 https://api.trackingmore.com/v4/trackings/delete/{id}
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Delete Tracking by ID (trackings/delete)
 const idString = "9a135b15b5d983e1d8950d99022db0c7"
 trackingmore.trackings.deleteTrackingByID(idString)
 .then(result => console.log(result))
@@ -172,9 +149,6 @@ trackingmore.trackings.deleteTrackingByID(idString)
 ##### Retrack expired tracking by ID.
 https://api.trackingmore.com/v4/trackings/retrack/{id}
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Retrack expired Tracking by ID (trackings/retrack)
 const idString = "99f4ed7fc73aa83fe68fd69ab6458b28"
 trackingmore.trackings.retrackTrackingByID(idString)
 .then(result => console.log(result))
@@ -184,9 +158,6 @@ trackingmore.trackings.retrackTrackingByID(idString)
 ##### Create an air waybill.
 https://api.trackingmore.com/v4/awb
 ```javascript
-const key = 'you api key'
-const trackingmore = new TrackingMore(key)
-// Create an air waybill (awb)
 const params = {
     'awb_number': '235-69030430',
 }
