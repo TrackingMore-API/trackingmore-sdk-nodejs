@@ -14,8 +14,8 @@ class AirWaybills {
         if (!params.awb_number) {
             throw new Error('Awb number cannot be empty')
         }
-        if (params.awb_number.length != 12) {
-            throw new Error('The air waybill number format is invalid and can only be 12 digits in length')
+        if (!/^\d{3}[ -]?(\d{8})$/.test(params.awb_number)) {
+            throw new Error('The air waybill number format is invalid')
         }
         const apiPath =  'awb'
         const response = Request.sendApiRequest(this.apiModule + '/' + apiPath, this.apiKey, 'POST', params)

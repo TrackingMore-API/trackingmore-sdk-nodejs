@@ -4,14 +4,14 @@ const key = 'you api key'
 const trackingmore = new TrackingMore(key)
 
 
-// try {
-//     // Get all couriers (couriers/all)
-//     trackingmore.couriers.getAllCouriers()
-//         .then(result => console.log(result))
-//         .catch(e => console.log(e))
-// } catch (error) {
-//     console.error('An error occurred:', error.message)
-// }
+try {
+    // Get all couriers (couriers/all)
+    trackingmore.couriers.getAllCouriers()
+        .then(result => console.log(result))
+        .catch(e => console.log(e))
+} catch (error) {
+    console.error('An error occurred:', error.message)
+}
 
 
 // try {
@@ -118,14 +118,14 @@ const trackingmore = new TrackingMore(key)
 //     console.error('An error occurred:', error.message)
 // }
 
-try {
-    // Create an air waybill (awb)
-    const params = {
-        'awb_number': '235-69030430',
-    }
-    trackingmore.airWaybills.createAnAirWayBill(params)
-    .then(result => console.log(result))
-    .catch(e => console.log(e))
-} catch (error) {
-    console.error('An error occurred:', error.message)
-}
+// try {
+//     // Create an air waybill (awb)
+//     const params = {
+//         'awb_number': '235-69030430',
+//     }
+//     trackingmore.airWaybills.createAnAirWayBill(params)
+//     .then(result => console.log(result))
+//     .catch(e => console.log(e))
+// } catch (error) {
+//     console.error('An error occurred:', error.message)
+// }
