@@ -1,7 +1,7 @@
-Trackingmore-sdk-nodejs
+TrackingMore-sdk-nodejs
 =================
 
-node.js SDK for Trackingmore API
+node.js SDK for TrackingMore API
 
 Contact: <manage@trackingmore.org>
 
@@ -10,12 +10,12 @@ Contact: <manage@trackingmore.org>
 [Document](https://www.trackingmore.com/docs/trackingmore/d5ac362fc3cda-api-quick-start)
 
 ## Index
-1. [Installation](https://github.com/TrackingMores/trackingmore-sdk-nodejs#installation)
-2. [Testing](https://github.com/TrackingMores/trackingmore-sdk-nodejs#testing)
+1. [Installation](https://github.com/TrackingMore-API/trackingmore-sdk-nodejs#installation)
+2. [Testing](https://github.com/TrackingMore-API/trackingmore-sdk-nodejs#testing)
 3. SDK
-    1. [Couriers](https://github.com/TrackingMores/trackingmore-sdk-nodejs#couriers)
-    2. [Trackings](https://github.com/TrackingMores/trackingmore-sdk-nodejs#trackings)
-    3. [Air Waybill](https://github.com/TrackingMores/trackingmore-sdk-nodejs#air-waybill)
+    1. [Couriers](https://github.com/TrackingMore-API/trackingmore-sdk-nodejs#couriers)
+    2. [Trackings](https://github.com/TrackingMore-API/trackingmore-sdk-nodejs#trackings)
+    3. [Air Waybill](https://github.com/TrackingMore-API/trackingmore-sdk-nodejs#air-waybill)
 
     
 ## Installation
