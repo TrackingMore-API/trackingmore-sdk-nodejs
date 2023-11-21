@@ -32,7 +32,7 @@ const trackingmore = new TrackingMore(key)
 
 trackingmore.couriers.getAllCouriers()
     .then(result => console.log(result))
-    .catch(e =>  console.error('An error occurred:', e.message))
+    .catch(e =>  console.log(e))
 ```
 
 ## Testing
@@ -42,7 +42,7 @@ npm run test or npm test
 
 ## Error handling
 
-Simply add a try-catch block
+For asynchronous operations, you can use Promise's catch method to listen for exceptions.
 
 ```javascript
 // Get all couriers (couriers/all)
