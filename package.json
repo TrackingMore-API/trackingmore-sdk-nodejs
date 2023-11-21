@@ -1,6 +1,6 @@
 {
   "name": "trackingmore-sdk-nodejs",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "node.js SDK for TrackingMore API",
   "main": "src/index.js",
   "scripts": {

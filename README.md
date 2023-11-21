@@ -29,13 +29,10 @@ npm install trackingmore-sdk-nodejs
 const TrackingMore = require('trackingmore-sdk-nodejs')
 const key = 'you api key'
 const trackingmore = new TrackingMore(key)
-try {
-    trackingmore.couriers.getAllCouriers()
-        .then(result => console.log(result))
-        .catch(e => console.log(e))
-} catch (error) {
-    console.error('An error occurred:', error.message)
-}
+
+trackingmore.couriers.getAllCouriers()
+    .then(result => console.log(result))
+    .catch(e =>  console.error('An error occurred:', e.message))
 ```
 
 ## Testing
@@ -48,14 +45,10 @@ npm run test or npm test
 Simply add a try-catch block
 
 ```javascript
-try {
-    // Get all couriers (couriers/all)
-    trackingmore.couriers.getAllCouriers()
-        .then(result => console.log(result))
-        .catch(e => console.log(e))
-} catch (error) {
-    console.error('An error occurred:', error.message)
-}
+// Get all couriers (couriers/all)
+trackingmore.couriers.getAllCouriers()
+    .then(result => console.log(result))
+    .catch(e =>  console.error('An error occurred:', e.message))
 
 ```
 
