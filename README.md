@@ -27,7 +27,7 @@ npm install trackingmore-sdk-nodejs
 
 ```javascript
 const TrackingMore = require('trackingmore-sdk-nodejs')
-const key = 'you api key'
+const key = 'your api key'
 const trackingmore = new TrackingMore(key)
 
 trackingmore.couriers.getAllCouriers()

@@ -1,6 +1,6 @@
 const TrackingMore = require('../src/index')
 
-const key = 'you api key'
+const key = 'your api key'
 const trackingmore = new TrackingMore(key)
 
 
